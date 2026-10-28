@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Now | Pipeline Resort Nantucket</title>
+  <meta name="description" content="Request a reservation at Pipeline Resort, Nantucket.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+  <circle cx="32" cy="32" r="31" fill="#173a5c" stroke="#c9a24a" stroke-width="2"/>
+  <path d="M22 13 l3 5 l3-6 l3 6 l3-6 l3 6 l3-5 v7 h-21 z" fill="#c9a24a"/>
+  <path d="M9 37c0-8 9-13 20-12 10 1 17 6 21 11l5-8c1-1 2 0 2 1l-2 9 4 5c1 1 0 2-1 2l-8-2c-5 6-13 9-22 9C17 52 9 46 9 37z" fill="#ffffff"/>
+  <path d="M13 41c5 4 13 5 20 4" stroke="#9fc6dc" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <circle cx="19" cy="34" r="1.8" fill="#0f2a44"/>
+</svg>
+        <span><span class="brand-name">Pipeline Resort</span><span class="brand-tag">Experience the crown</span></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">&#9776; Menu</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="accommodations.html">Accommodations</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="wellness.html">Wellness</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="employment.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="book.html" class="nav-cta active">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="promo-strip">&#128081; Book now for the luxury Nantucket experience!</div>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Reservations</span>
+        <h1>Book Your Stay</h1>
+        <p>Fill out the quick form below to request your cottage or room reservation. Our team will email you back within 24 hours to confirm your dates!</p>
+      </div>
+    </section>
+    <section class="block">
+      <div class="container">
+        <div class="form-card">
+          <form id="booking-form" novalidate>
+            <div class="form-grid">
+              <div class="full">
+                <label for="name">Full Name</label>
+                <input id="name" name="name" autocomplete="name" required>
+              </div>
+              <div>
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div>
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+              </div>
+              <div>
+                <label for="checkin">Check-in Date</label>
+                <input id="checkin" name="checkin" type="date" required>
+              </div>
+              <div>
+                <label for="checkout">Check-out Date</label>
+                <input id="checkout" name="checkout" type="date" required>
+              </div>
+              <div class="full">
+                <label for="room">Room Type</label>
+                <select id="room" name="room" required>
+                  <option value="" disabled selected>Choose a room…</option>
+                  <option value="cottage">Oceanfront Cottage ($800 – $1,500 / night)</option>
+                  <option value="villa">Private Pool Villa ($1,200 – $2,000 / night)</option>
+                  <option value="suite">Luxury Suite ($500 – $900 / night)</option>
+                </select>
+              </div>
+              <div class="full">
+                <label>Package Add-ons</label>
+                <div class="checks">
+                  <label><input type="checkbox" name="addons" value="Summer Package (7+ nights)"> Summer Package (7+ nights)</label>
+                  <label><input type="checkbox" name="addons" value="Spa Treatment"> Spa Treatment</label>
+                  <label><input type="checkbox" name="addons" value="Round of Golf"> Round of Golf</label>
+                  <label><input type="checkbox" name="addons" value="Beach Cabana"> Beach Cabana</label>
+                  <label><input type="checkbox" name="addons" value="Sunset Boat Ride"> Sunset Boat Ride</label>
+                  <label><input type="checkbox" name="addons" value="Deep Sea Fishing"> Deep Sea Fishing</label>
+                </div>
+              </div>
+              <div class="full">
+                <label for="requests">Special Requests</label>
+                <textarea id="requests" name="requests" placeholder="Anniversary, dietary needs, late check-in…"></textarea>
+              </div>
+              <div class="full">
+                <button class="btn btn-block" type="submit">Request Reservation</button>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+          </form>
+          <div class="confirm" id="confirm" aria-live="polite">
+            <h2>&#128081; Request received!</h2>
+            <p class="muted">Thanks for choosing Pipeline Resort. Our team will email you within 24 hours to confirm your dates.</p>
+            <dl id="confirm-details"></dl>
+            <button class="btn" id="book-again" type="button">Make Another Request</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Pipeline Resort</h4>
+          <p>Nantucket's premier luxury coastal spot.<br><em>Experience the crown.</em></p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="accommodations.html">Accommodations</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="wellness.html">Wellness</a></li>
+            <li><a href="activities.html">Activities</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resort</h4>
+          <ul>
+            <li><a href="gallery.html">Picture Gallery</a></li>
+            <li><a href="employment.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="book.html">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Nantucket, MA 02554</li>
+            <li><a href="tel:+19202242567">(920) 224-2567</a></li>
+            <li><a href="mailto:info@pipelineresortnantucket.com">info@pipelineresortnantucket.com</a></li>
+            <li>Front Desk open 24/7</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; <span data-year>2026</span> Pipeline Resort, Nantucket &middot; A student project &middot; Fictional resort for educational purposes.</div>
+    </div>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>
