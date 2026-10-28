@@ -253,3 +253,9 @@ textarea { min-height: 110px; resize: vertical; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
 .site-footer li { margin-bottom: 6px; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); margin-top: 30px; padding-top: 18px; text-align: center; font-size: .82rem; }
+
+/* Real photo in a scene: hide the drawn artwork */
+.scene.has-photo { background: var(--navy); }
+.scene.has-photo .scene-sun,
+.scene.has-photo .scene-waves,
+.scene.has-photo .icon { display: none; }
